@@ -101,9 +101,6 @@ RUN apk add --no-cache --virtual .pgsql-deps postgresql-dev; \
 ###< doctrine/doctrine-bundle ###
 ###< recipes ###
 
-USER www-data:www-data
-COPY --chown=www-data:www-data . .
-
 RUN set -eux; \
 	mkdir -p var/cache var/log; \
 	composer install --prefer-dist --no-dev --no-progress --no-scripts --no-interaction; \

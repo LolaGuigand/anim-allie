@@ -1,8 +1,8 @@
 start:
-	UID=${UID} GID=${GID} docker compose up
+	docker-compose up --build
 
 stop:
-	docker compose down
+	docker-compose down
 
 shell:
-	docker compose run php sh
+	docker-compose run php sh
