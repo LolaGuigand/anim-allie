@@ -101,7 +101,8 @@ RUN apk add --no-cache --virtual .pgsql-deps postgresql-dev; \
 ###< doctrine/doctrine-bundle ###
 ###< recipes ###
 
-COPY . .
+USER www-data:www-data
+COPY --chown=www-data:www-data . .
 
 RUN set -eux; \
 	mkdir -p var/cache var/log; \
