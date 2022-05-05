@@ -39,14 +39,19 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Bureau de derrière');
-    }
+            ->setTitle('<h1>Arrière-boutique</h1>')
+            ->setFaviconPath('favicon.ico')
+            ->renderContentMaximized()
+            ;
+            
+        }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToDashboard('Tableau de Tirets', 'fa fa-home');
-         yield MenuItem::linkToCrud('Animaux', 'fas fa-list', Animal::class);
-         yield MenuItem::linkToCrud('Bénévoles', 'fas fa-list', Benevole::class);
-         yield MenuItem::linkToCrud('Adoptions', 'fas fa-list', ContratDAdoption::class);
+        yield MenuItem::linkToDashboard('<b>Tableau de Tirets</b>', 'fa fa-home');
+         yield MenuItem::linkToCrud('Animaux', 'fas fa-paw', Animal::class);
+         yield MenuItem::linkToCrud('Bénévoles', 'fas fa-person', Benevole::class);
+         yield MenuItem::linkToCrud('Adoptions', 'fas fa-file', ContratDAdoption::class);
     }
+
 }
