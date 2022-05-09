@@ -6,6 +6,7 @@ use App\Repository\AnimalRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: AnimalRepository::class)]
+
 class Animal
 {
     #[ORM\Id]
