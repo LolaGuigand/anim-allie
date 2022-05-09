@@ -72,6 +72,17 @@ class Animal
         return $this;
     }
 
+    public function getPhotoUrl(): ?string
+    {
+        if (!$this->photo) {
+            return null;
+        }
+        if (strpos($this->photo, '/') !== false) {
+            return $this->photo;
+        }
+        return sprintf('/uploads/images/%s', $this->photo);
+    }
+
     public function getIsFemale(): ?bool
 
     {

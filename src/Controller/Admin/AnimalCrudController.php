@@ -5,9 +5,6 @@ namespace App\Controller\Admin;
 use App\Entity\Animal;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
-use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
@@ -25,7 +22,10 @@ class AnimalCrudController extends AbstractCrudController
         return [
             TextField::new('petitNom', 'Nom de l\'animal')->setColumns(6),
             TextareaField::new('description', 'Description'),
-            // ImageField::new('photo', 'Photo')->setBasePath('uploads/images/')->setUploadDir('assets/images/')->setUploadedFileNamePattern('[year]/[month]/[day]/[slug]-[contenthash].[extension]'),
+            ImageField::new('photo', 'Photo')
+                ->setBasePath('uploads/images')
+                ->setUploadDir('public/uploads/images')
+                ->setUploadedFileNamePattern('[year]/[month]/[day]/[slug]-[contenthash].[extension]'),
             TextField::new('couleur', 'Couleur'),
             ChoiceField::new('isFemale', 'Sexe')
                 ->setChoices([
