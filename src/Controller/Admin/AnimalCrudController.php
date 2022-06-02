@@ -29,7 +29,7 @@ class AnimalCrudController extends AbstractCrudController
             TextField::new('couleur', 'Couleur'),
             ChoiceField::new('isFemale', 'Sexe')
                 ->setChoices([
-                    'Mâle' => false,
+                    'Mâle' => 'false',
                     'Femelle' => 'true',
                 ])
                 ->allowMultipleChoices(false)
