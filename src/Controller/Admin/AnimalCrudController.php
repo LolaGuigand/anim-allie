@@ -23,13 +23,13 @@ class AnimalCrudController extends AbstractCrudController
             TextField::new('petitNom', 'Nom de l\'animal')->setColumns(6),
             TextareaField::new('description', 'Description'),
             ImageField::new('photo', 'Photo')
-                ->setBasePath('uploads/images')
-                ->setUploadDir('public/uploads/images')
+                ->setBasePath('uploads/')
+                ->setUploadDir('public/uploads')
                 ->setUploadedFileNamePattern('[year]/[month]/[day]/[slug]-[contenthash].[extension]'),
             TextField::new('couleur', 'Couleur'),
             ChoiceField::new('isFemale', 'Sexe')
                 ->setChoices([
-                    'Mâle' => false,
+                    'Mâle' => 'false',
                     'Femelle' => 'true',
                 ])
                 ->allowMultipleChoices(false)
@@ -44,7 +44,7 @@ class AnimalCrudController extends AbstractCrudController
 
             ->setEntityLabelInSingular('Animal')
             ->setEntityLabelInPlural('Animaux')
-            
+
             // the visible title at the top of the page and the content of the <title> element
             // it can include these placeholders:
             //   %entity_name%, %entity_as_string%,
