@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May  9 13:36:07 2022
+# Make data base, printed on Mon May 30 18:38:18 2022
 
 # Variables
 
@@ -49,11 +49,11 @@ CURDIR := /home/lolette/code/anim-allie
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code/95
+SNAP_DATA = /var/snap/code/96
 # environment
-VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"50ccac6e9bb708a41bfd03dcbba396d8.fr","_translationsConfigFile":"/home/lolette/.config/Code/clp/50ccac6e9bb708a41bfd03dcbba396d8.fr/tcf.json","_cacheRoot":"/home/lolette/.config/Code/clp/50ccac6e9bb708a41bfd03dcbba396d8.fr","_resolvedLanguagePackCoreLocation":"/home/lolette/.config/Code/clp/50ccac6e9bb708a41bfd03dcbba396d8.fr/57fd6d0195bb9b9d1b49f6da5db789060795de47","_corruptedFile":"/home/lolette/.config/Code/clp/50ccac6e9bb708a41bfd03dcbba396d8.fr/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{"*":"fr"},"_languagePackId":"25fe6a3290ec415596628d4afc87a88c.fr","_translationsConfigFile":"/home/lolette/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/tcf.json","_cacheRoot":"/home/lolette/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr","_resolvedLanguagePackCoreLocation":"/home/lolette/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/da15b6fd3ef856477bf6f4fb29ba1b7af717770d","_corruptedFile":"/home/lolette/.config/Code/clp/25fe6a3290ec415596628d4afc87a88c.fr/corrupted.info","_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:32601
+JOURNAL_STREAM = 8:38465
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -77,9 +77,9 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-_ = /snap/code/95/usr/share/code/code
+_ = /snap/code/96/usr/share/code/code
 # environment
-MANAGERPID = 1066
+MANAGERPID = 1097
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -87,7 +87,7 @@ LC_NAME = fr_FR.UTF-8
 # environment
 VSCODE_CWD = /home/lolette
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/95/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/96/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -95,15 +95,15 @@ PATH = /home/lolette/.platformsh/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/lolette-FX503VM:@/tmp/.ICE-unix/1314,unix/lolette-FX503VM:/tmp/.ICE-unix/1314
+SESSION_MANAGER = local/lolette-FX503VM:@/tmp/.ICE-unix/1434,unix/lolette-FX503VM:/tmp/.ICE-unix/1434
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/lolette/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/95
+SNAP = /snap/code/96
 # environment
-SNAP_VERSION = 57fd6d01
+SNAP_VERSION = da15b6fd
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -113,9 +113,9 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 30b23e5625344f00833495d2ddf9303e
+INVOCATION_ID = f8941b657d3f4f54b9775b8ccc7546c5
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/95/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/96/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -125,7 +125,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 6621
+GIO_LAUNCHED_DESKTOP_FILE_PID = 38967
 # automatic
 %F = $(notdir $%)
 # environment
@@ -139,7 +139,7 @@ PWD = /home/lolette/code/anim-allie
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1234
+SSH_AGENT_PID = 1314
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -153,7 +153,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/lolette/.config/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
+VSCODE_CODE_CACHE_PATH = /home/lolette/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
 # environment
 LOGNAME = lolette
 # environment
@@ -185,19 +185,19 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SNAP_USER_DATA = /home/lolette/snap/code/95
+SNAP_USER_DATA = /home/lolette/snap/code/96
 # environment
 SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-dcf72c98-defb-4611-a41a-a3a4ebfe26a3.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-63ba7a4a-2934-4f12-8962-5fac1e63db4b.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = lolette
 # environment
-SNAP_REVISION = 95
+SNAP_REVISION = 96
 # environment
 LC_MONETARY = fr_FR.UTF-8
 # makefile
@@ -217,7 +217,7 @@ MAKE_COMMAND := make
 # environment
 LANGUAGE = fr_FR:en_US:en
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-f2767b19-1.67.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-f2767b19-1.67.1-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile
@@ -270,16 +270,16 @@ GJS_DEBUG_OUTPUT = stderr
 .RECIPEPREFIX := 
 # environment
 LC_ADDRESS = fr_FR.UTF-8
- 
 # environment
 LANG = C
 # environment
-VSCODE_PID = 6672
+VSCODE_PID = 39018
 # variable set hash-table stats:
 # Load=131/1024=13%, Rehash=0, Collisions=23/156=15%
 
 # Pattern-specific Variable Values
 
+ 
 # No pattern-specific variable values.
 
 # Directories
@@ -311,7 +311,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-04 12:00:02.933377857
+#  Last modified 2022-05-09 14:16:44.662759947
 #  File has been updated.
 #  Successfully updated.
 
@@ -320,7 +320,7 @@ start:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
-	docker compose up --build
+	docker compose up --build -d
 
 # Not a target:
 .DEFAULT:
@@ -349,6 +349,6 @@ shell:
 # strcache performance: lookups = 47 / hit rate = 14%
 # hash-table stats:
 # Load=40/8192=0%, Rehash=0, Collisions=3/47=6%
-# Finished Make data base on Mon May  9 13:36:07 2022
+# Finished Make data base on Mon May 30 18:38:18 2022
 
  

@@ -1,5 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/lolette/code/anim-allie'
-docker compose up --build
+docker compose up --build -d
 make: Leaving directory '/home/lolette/code/anim-allie'
  

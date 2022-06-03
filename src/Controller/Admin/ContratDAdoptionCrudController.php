@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\ContratDAdoption;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 
 class ContratDAdoptionCrudController extends AbstractCrudController
 {
@@ -13,16 +14,15 @@ class ContratDAdoptionCrudController extends AbstractCrudController
         return ContratDAdoption::class;
     }
 
-    /*
+    
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            AssociationField::new('animalId','Numéro ou nom de l\'animal adopté')->autocomplete(
+            )->setCrudController(AnimalCrudController::class),
         ];
     }
-    */
+    
 
     public function configureCrud(Crud $crud): Crud
     {

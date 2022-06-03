@@ -10,25 +10,25 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20220504150500 extends AbstractMigration
+final class Version20220603134758 extends AbstractMigration
 {
     public function getDescription(): string
     {
-        return '';
+        return 'insert default values for species and animal colours';
     }
 
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('CREATE SEQUENCE espece_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
-        $this->addSql('CREATE TABLE espece (id INT NOT NULL, nom_espece VARCHAR(255) NOT NULL, PRIMARY KEY(id))');
+
+        $this->addSql("INSERT INTO espece (id, nom_espece) VALUES (1,'Chien'), (2,'Chat'), (3,'Autre')");
+        $this->addSql("INSERT INTO couleur (id,nom_couleur) VALUES (1,'Noir'), (2,'Blanc'), (3,'Beige'), (4,'Roux'), (5,'Rayé'), (6,'Nu')");
+
     }
 
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('CREATE SCHEMA public');
-        $this->addSql('DROP SEQUENCE espece_id_seq CASCADE');
-        $this->addSql('DROP TABLE espece');
+
     }
 }

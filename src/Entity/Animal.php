@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\AnimalRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: AnimalRepository::class)]
@@ -23,14 +25,23 @@ class Animal
     #[ORM\Column(type: 'string', length: 300, nullable: true)]
     private $photo;
 
-    #[ORM\Column(type: 'boolean')]
+    #[ORM\Column(type: 'boolean', nullable: false)]
     private $isFemale;
-
-    #[ORM\Column(type: 'string', length: 255)]
-    private $couleur;
 
     #[ORM\OneToOne(mappedBy: 'animalId', targetEntity: ContratDAdoption::class, cascade: ['persist', 'remove'])]
     private $contratDAdoption;
+
+    #[ORM\ManyToOne(targetEntity: Espece::class, inversedBy: 'animalsList')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $especeId;
+
+    #[ORM\ManyToMany(targetEntity: Couleur::class, inversedBy: 'animals')]
+    private $couleur;
+
+    public function __construct()
+    {
+        $this->couleur = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -97,18 +108,6 @@ class Animal
         return $this;
     }
 
-    public function getCouleur(): ?string
-    {
-        return $this->couleur;
-    }
-
-    public function setCouleur(string $couleur): self
-    {
-        $this->couleur = $couleur;
-
-        return $this;
-    }
-
     public function getContratDAdoption(): ?ContratDAdoption
     {
         return $this->contratDAdoption;
@@ -122,6 +121,42 @@ class Animal
         }
 
         $this->contratDAdoption = $contratDAdoption;
+
+        return $this;
+    }
+
+    public function getEspeceId(): ?Espece
+    {
+        return $this->especeId;
+    }
+
+    public function setEspeceId(?Espece $especeId): self
+    {
+        $this->especeId = $especeId;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Couleur>
+     */
+    public function getCouleur(): Collection
+    {
+        return $this->couleur;
+    }
+
+    public function addCouleur(Couleur $couleur): self
+    {
+        if (!$this->couleur->contains($couleur)) {
+            $this->couleur[] = $couleur;
+        }
+
+        return $this;
+    }
+
+    public function removeCouleur(Couleur $couleur): self
+    {
+        $this->couleur->removeElement($couleur);
 
         return $this;
     }

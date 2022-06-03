@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 
 class AnimalCrudController extends AbstractCrudController
 {
@@ -26,15 +27,16 @@ class AnimalCrudController extends AbstractCrudController
                 ->setBasePath('uploads/')
                 ->setUploadDir('public/uploads')
                 ->setUploadedFileNamePattern('[year]/[month]/[day]/[slug]-[contenthash].[extension]'),
-            TextField::new('couleur', 'Couleur'),
+            AssociationField::new('especeId','Espèce')->autocomplete()
+            ->setCrudController(EspeceCrudController::class),
+            AssociationField::new('couleur', 'Couleur')->autocomplete(),
             ChoiceField::new('isFemale', 'Sexe')
                 ->setChoices([
                     'Mâle' => 'false',
                     'Femelle' => 'true',
                 ])
                 ->allowMultipleChoices(false)
-                ->renderExpanded()
-                ->autocomplete(),
+                ->renderExpanded(),
         ];
     }
 
