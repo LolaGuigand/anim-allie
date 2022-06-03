@@ -160,4 +160,8 @@ class Animal
 
         return $this;
     }
+
+    public function __toString(){
+        return $this->petitNom ." (référence #". $this->id .")"; 
+      }
 }

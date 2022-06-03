@@ -16,7 +16,7 @@ class Espece
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $NomEspece;
+    private $nomEspece;
 
     #[ORM\OneToMany(mappedBy: 'EspeceId', targetEntity: Animal::class)]
     private $animalsList;
@@ -33,12 +33,12 @@ class Espece
 
     public function getNomEspece(): ?string
     {
-        return $this->NomEspece;
+        return $this->nomEspece;
     }
 
-    public function setNomEspece(string $NomEspece): self
+    public function setNomEspece(string $nomEspece): self
     {
-        $this->NomEspece = $NomEspece;
+        $this->nomEspece = $nomEspece;
 
         return $this;
     }
@@ -72,5 +72,9 @@ class Espece
 
         return $this;
     }
+
+    public function __toString(){
+        return $this->nomEspece; 
+      }
 }
 

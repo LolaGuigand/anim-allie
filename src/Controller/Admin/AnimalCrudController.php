@@ -27,15 +27,18 @@ class AnimalCrudController extends AbstractCrudController
                 ->setBasePath('uploads/')
                 ->setUploadDir('public/uploads')
                 ->setUploadedFileNamePattern('[year]/[month]/[day]/[slug]-[contenthash].[extension]'),
-            AssociationField::new('especeId','Espèce')->autocomplete()
-            ->setCrudController(EspeceCrudController::class),
-            AssociationField::new('couleur', 'Couleur')->autocomplete(),
+            AssociationField::new('especeId','Espèce')
+                ->autocomplete()
+                ->setCrudController(EspeceCrudController::class),
+            AssociationField::new('couleur', 'Couleur')
+                ->autocomplete(),
             ChoiceField::new('isFemale', 'Sexe')
                 ->setChoices([
                     'Mâle' => 'false',
                     'Femelle' => 'true',
                 ])
                 ->allowMultipleChoices(false)
+                ->autocomplete()
                 ->renderExpanded(),
         ];
     }
